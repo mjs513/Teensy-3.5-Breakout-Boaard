@@ -396,6 +396,28 @@ Text Label 5050 6350 0    60   ~ 0
 10(**/SS)
 Text Label 5050 6050 0    60   ~ 0
 13(SCK)
+$Comp
+L R R1
+U 1 1 582628F2
+P 9700 6300
+F 0 "R1" V 9780 6300 50  0000 C CNN
+F 1 "10k" V 9700 6300 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 9630 6300 50  0000 C CNN
+F 3 "" H 9700 6300 50  0000 C CNN
+	1    9700 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 58262F0E
+P 9700 6600
+F 0 "R2" V 9780 6600 50  0000 C CNN
+F 1 "10k" V 9700 6600 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 9630 6600 50  0000 C CNN
+F 3 "" H 9700 6600 50  0000 C CNN
+	1    9700 6600
+	0    1    1    0   
+$EndComp
 Wire Wire Line
 	3300 5900 3300 6150
 Wire Wire Line
@@ -423,8 +445,6 @@ Wire Wire Line
 	4700 7450 5450 7450
 Wire Wire Line
 	4700 7350 5400 7350
-Wire Wire Line
-	4250 7250 5050 7250
 Wire Wire Line
 	4700 7150 7000 7150
 Wire Wire Line
@@ -706,8 +726,6 @@ Connection ~ 8500 3650
 Wire Wire Line
 	3950 3700 3950 4750
 Wire Wire Line
-	3900 4750 5800 4750
-Wire Wire Line
 	5850 6150 5850 4750
 Connection ~ 3250 3700
 Wire Wire Line
@@ -880,28 +898,6 @@ Wire Wire Line
 	7650 5500 7650 6350
 Wire Wire Line
 	7650 6350 8550 6350
-$Comp
-L R R1
-U 1 1 582628F2
-P 9700 6300
-F 0 "R1" V 9780 6300 50  0000 C CNN
-F 1 "10k" V 9700 6300 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 9630 6300 50  0000 C CNN
-F 3 "" H 9700 6300 50  0000 C CNN
-	1    9700 6300
-	0    1    1    0   
-$EndComp
-$Comp
-L R R2
-U 1 1 58262F0E
-P 9700 6600
-F 0 "R2" V 9780 6600 50  0000 C CNN
-F 1 "10k" V 9700 6600 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 9630 6600 50  0000 C CNN
-F 3 "" H 9700 6600 50  0000 C CNN
-	1    9700 6600
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8850 6350 9550 6350
 Wire Wire Line
@@ -920,4 +916,8 @@ Wire Wire Line
 	10450 6300 9850 6300
 Wire Wire Line
 	9850 6300 9850 6600
+Wire Wire Line
+	5850 4750 3950 4750
+Wire Wire Line
+	4250 7250 4700 7250
 $EndSCHEMATC
