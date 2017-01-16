@@ -28,7 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:Teensy 35 Breakout v1-cache
+LIBS:Teensy 35 Breakout v2-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -297,25 +297,25 @@ F 3 "" H 6500 2700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X04 P22
+L CONN_01X05 P22
 U 1 1 57F9BE0A
-P 4750 2300
-F 0 "P22" H 4750 2550 50  0000 C CNN
-F 1 "CONN_01X04" V 4850 2300 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x04" H 4750 2300 50  0001 C CNN
-F 3 "" H 4750 2300 50  0000 C CNN
-	1    4750 2300
+P 4750 2250
+F 0 "P22" H 4750 2500 50  0000 C CNN
+F 1 "CONN_01X05" V 4850 2250 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x05" H 4750 2250 50  0001 C CNN
+F 3 "" H 4750 2250 50  0000 C CNN
+	1    4750 2250
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X04 P23
+L CONN_01X05 P23
 U 1 1 57F9D60A
-P 4000 2300
-F 0 "P23" H 4000 2550 50  0000 C CNN
-F 1 "CONN_01X04" V 4100 2300 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 4000 2300 50  0001 C CNN
-F 3 "" H 4000 2300 50  0000 C CNN
-	1    4000 2300
+P 4000 2250
+F 0 "P23" H 4000 2500 50  0000 C CNN
+F 1 "CONN_01X05" V 4100 2250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05" H 4000 2250 50  0001 C CNN
+F 3 "" H 4000 2250 50  0000 C CNN
+	1    4000 2250
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -819,9 +819,9 @@ Connection ~ 4200 2150
 Wire Wire Line
 	4200 2150 4550 2150
 Wire Wire Line
-	4550 2250 4200 2250
+	4200 2250 4550 2250
 Wire Wire Line
-	4200 2350 4550 2350
+	4200 2350 4600 2350
 Wire Wire Line
 	4550 2450 4200 2450
 Connection ~ 7000 4300
@@ -919,4 +919,46 @@ Wire Wire Line
 Wire Wire Line
 	7000 4750 7000 3850
 Connection ~ 7800 3850
+Wire Wire Line
+	4200 2050 4550 2050
+Connection ~ 4200 2050
+Connection ~ 4550 2050
+$Comp
+L USB_A P29
+U 1 1 586306D0
+P 4500 1250
+F 0 "P29" H 4700 1050 50  0000 C CNN
+F 1 "USB_A" H 4450 1450 50  0000 C CNN
+F 2 "Connect:USB_A" V 4450 1150 50  0001 C CNN
+F 3 "" V 4450 1150 50  0000 C CNN
+	1    4500 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2050 4550 1800
+Wire Wire Line
+	4550 1800 4300 1800
+Wire Wire Line
+	4300 1800 4300 1550
+Wire Wire Line
+	4400 2150 4400 1550
+Wire Wire Line
+	4500 2250 4500 1550
+Wire Wire Line
+	4600 2350 4600 1550
+Connection ~ 4300 1550
+Connection ~ 4400 1550
+Connection ~ 4500 1550
+Connection ~ 4600 1550
+Connection ~ 4400 2150
+Connection ~ 4500 2250
+Wire Wire Line
+	4550 2450 4550 2600
+Wire Wire Line
+	4550 2600 5000 2600
+Wire Wire Line
+	5000 2600 5000 1150
+Wire Wire Line
+	5000 1150 4800 1150
+Connection ~ 4800 1150
 $EndSCHEMATC
