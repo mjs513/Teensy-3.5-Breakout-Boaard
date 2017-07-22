@@ -54,7 +54,7 @@
       (place J5 133988 -103247 front 90 (PN CONN_01X14))
     )
     (component Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm
-      (place J2 172098 -100105 front 180 (PN CONN_01X04))
+      (place J2 172698 -99315 front 180 (PN CONN_01X04))
       (place J6 129148 -99965 front 180 (PN CONN_01X04))
     )
     (component Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm
@@ -73,9 +73,9 @@
     (component Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm
       (place J10 115458 -122365 front 90 (PN CONN_01X02))
     )
-    (component "Diodes_SMD:D_SOD-323"
-      (place D3 154948 -113865 front 0 (PN D_Schottky_ALT))
-      (place D4 154998 -117115 front 0 (PN D_Schottky_ALT))
+    (component "Diodes_THT:D_DO-15_P10.16mm_Horizontal"
+      (place D4 154998 -117115 front 0 (PN D_Schottky))
+      (place D3 154888 -112765 front 0 (PN D_Schottky))
     )
   )
   (library
@@ -400,26 +400,27 @@
       (pin Rect[A]Pad_1700x1700_um 1 0 0)
       (pin Oval[A]Pad_1700x1700_um 2 0 -2540)
     )
-    (image "Diodes_SMD:D_SOD-323"
-      (outline (path signal 120  -1500 850  -1500 -850))
-      (outline (path signal 100  200 0  450 0))
-      (outline (path signal 100  200 -350  -300 0))
-      (outline (path signal 100  200 350  200 -350))
-      (outline (path signal 100  -300 0  200 350))
-      (outline (path signal 100  -300 0  -500 0))
-      (outline (path signal 100  -300 350  -300 -350))
-      (outline (path signal 100  -900 -700  -900 700))
-      (outline (path signal 100  900 -700  -900 -700))
-      (outline (path signal 100  900 700  900 -700))
-      (outline (path signal 100  -900 700  900 700))
-      (outline (path signal 50  -1600 950  1600 950))
-      (outline (path signal 50  1600 950  1600 -950))
-      (outline (path signal 50  -1600 -950  1600 -950))
-      (outline (path signal 50  -1600 950  -1600 -950))
-      (outline (path signal 120  -1500 -850  1050 -850))
-      (outline (path signal 120  -1500 850  1050 850))
-      (pin Rect[T]Pad_600x450_um 1 -1050 0)
-      (pin Rect[T]Pad_600x450_um 2 1050 0)
+    (image "Diodes_THT:D_DO-15_P10.16mm_Horizontal"
+      (outline (path signal 100  1280 1800  1280 -1800))
+      (outline (path signal 100  1280 -1800  8880 -1800))
+      (outline (path signal 100  8880 -1800  8880 1800))
+      (outline (path signal 100  8880 1800  1280 1800))
+      (outline (path signal 100  0 0  1280 0))
+      (outline (path signal 100  10160 0  8880 0))
+      (outline (path signal 100  2420 1800  2420 -1800))
+      (outline (path signal 120  1220 1380  1220 1860))
+      (outline (path signal 120  1220 1860  8940 1860))
+      (outline (path signal 120  8940 1860  8940 1380))
+      (outline (path signal 120  1220 -1380  1220 -1860))
+      (outline (path signal 120  1220 -1860  8940 -1860))
+      (outline (path signal 120  8940 -1860  8940 -1380))
+      (outline (path signal 120  2420 1860  2420 -1860))
+      (outline (path signal 50  -1450 2150  -1450 -2150))
+      (outline (path signal 50  -1450 -2150  11650 -2150))
+      (outline (path signal 50  11650 -2150  11650 2150))
+      (outline (path signal 50  11650 2150  -1450 2150))
+      (pin Rect[A]Pad_2400x2400_um 1 0 0)
+      (pin Oval[A]Pad_2400x2400_um 2 10160 0)
     )
     (padstack Round[A]Pad_4064_um
       (shape (circle F.Cu 4064))
@@ -436,8 +437,14 @@
       (shape (path B.Cu 1727.2  0 -152.4  0 152.4))
       (attach off)
     )
-    (padstack Rect[T]Pad_600x450_um
-      (shape (rect F.Cu -300 -225 300 225))
+    (padstack Oval[A]Pad_2400x2400_um
+      (shape (path F.Cu 2400  0 0  0 0))
+      (shape (path B.Cu 2400  0 0  0 0))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_2400x2400_um
+      (shape (rect F.Cu -1200 -1200 1200 1200))
+      (shape (rect B.Cu -1200 -1200 1200 1200))
       (attach off)
     )
     (padstack Rect[A]Pad_1700x1700_um
@@ -633,7 +640,7 @@
       (pins J9-3 D4-2)
     )
     (net "Net-(D3-Pad1)"
-      (pins J1-1 J2-1 J6-4 J7-4 J4-4 D3-1 D4-1)
+      (pins J1-1 J2-1 J6-4 J7-4 J4-4 D4-1 D3-1)
     )
     (net /GND
       (pins P3-4)
@@ -641,14 +648,13 @@
     (class kicad_default "" +3V3 +5V "/0(Rx)" "/1(Tx)" "/10(**/SS)" "/11(**/MOSI)"
       "/12(MISO)" "/13(SCK)" /2 "/3(**)" /4 "/5(**)" "/6(**)" /7 /8 "/9(**)"
       /A0 /A1 /A2 /A3 "/A4(SDA)" "/A5(SCL)" /AREF /GND /IOREF /Reset /Vin
-      "Net-(D1-Pad1)" "Net-(D3-Pad1)" "Net-(D4-Pad2)" "Net-(J1-Pad10)" "Net-(J1-Pad11)"
-      "Net-(J1-Pad12)" "Net-(J1-Pad13)" "Net-(J1-Pad2)" "Net-(J1-Pad4)" "Net-(J1-Pad5)"
-      "Net-(J1-Pad6)" "Net-(J1-Pad7)" "Net-(J10-Pad1)" "Net-(J10-Pad2)" "Net-(J2-Pad2)"
-      "Net-(J2-Pad3)" "Net-(J2-Pad4)" "Net-(J3-Pad1)" "Net-(J3-Pad2)" "Net-(J3-Pad3)"
-      "Net-(J3-Pad4)" "Net-(J3-Pad5)" "Net-(J4-Pad1)" "Net-(J4-Pad2)" "Net-(J4-Pad3)"
-      "Net-(J5-Pad10)" "Net-(J5-Pad11)" "Net-(J5-Pad12)" "Net-(J5-Pad2)" "Net-(J5-Pad3)"
-      "Net-(J5-Pad5)" "Net-(J5-Pad6)" "Net-(P1-Pad6)" "Net-(P1-Pad7)" "Net-(P3-Pad4)"
-      "Net-(P5-Pad1)" "Net-(P6-Pad1)" "Net-(P7-Pad1)"
+      "Net-(D3-Pad1)" "Net-(D4-Pad2)" "Net-(J1-Pad10)" "Net-(J1-Pad11)" "Net-(J1-Pad12)"
+      "Net-(J1-Pad13)" "Net-(J1-Pad2)" "Net-(J1-Pad4)" "Net-(J1-Pad5)" "Net-(J1-Pad6)"
+      "Net-(J1-Pad7)" "Net-(J10-Pad1)" "Net-(J10-Pad2)" "Net-(J2-Pad2)" "Net-(J2-Pad3)"
+      "Net-(J2-Pad4)" "Net-(J3-Pad1)" "Net-(J3-Pad2)" "Net-(J3-Pad3)" "Net-(J3-Pad4)"
+      "Net-(J3-Pad5)" "Net-(J4-Pad1)" "Net-(J4-Pad2)" "Net-(J4-Pad3)" "Net-(J5-Pad10)"
+      "Net-(J5-Pad11)" "Net-(J5-Pad12)" "Net-(J5-Pad2)" "Net-(J5-Pad3)" "Net-(J5-Pad5)"
+      "Net-(J5-Pad6)" "Net-(P1-Pad6)" "Net-(P5-Pad1)" "Net-(P6-Pad1)" "Net-(P7-Pad1)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
